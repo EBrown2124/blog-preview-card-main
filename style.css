@@ -5,6 +5,10 @@
     font-weight: 500 800;
 }
 
+/* fontend Mentor presets */
+.attribution { font-size: 0.6875rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
 :root{
     /*color used in project*/
     --color-yellow:hsl(47, 88%, 63%);
@@ -13,9 +17,6 @@
     --color-Gray-950:hsl(0, 0%, 7%);
 }
 
-.attribution { font-size: 0.6875rem; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -23,6 +24,7 @@
 }
 
 body {
+    position: relative;
     background-color: var(--color-yellow);
     font-family:"Figtree", sans-serif;
     min-height: 100vh;
@@ -33,57 +35,64 @@ body {
 }
 
 main {
-    background-color: var(--color-white);
     display: flex;
-    flex-direction: column;
-    width: 500px;
-    height: min-content;
-    padding: 30px;
-    border-radius: 30px;
+    justify-content: center;
+    padding: 0 30px;
+    width: 100%;
+}
+
+.card {
+    background-color: var(--color-white);
+    max-width: 380px;
+    padding: 20px;
     border: 2px solid var(--color-Gray-950);
+    border-radius: 30px;
     box-shadow: 10px 10px var(--color-Gray-950);
 }
 
-#banner {
+.card-img {
     border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .tag {
-    margin: 25px 0 15px;
     background-color: var(--color-yellow);
-    padding: 10px 15px;
+    padding: 5px 10px;
     border-radius: 10px;
     width: fit-content;
     font-weight: bold;
 }
 
-.content{
-margin: 20px 0;
+.title{
+    font-size: 24px;
+    font-weight: 600;
 }
 
-.content p {
-    width: fit-content;
+.title:hover{
+    color: var(--color-yellow);
+    text-shadow: 1.5px 1.5px var(--color-Gray-500);
+    cursor: pointer;
+}
+
+.description{
     font-size: 16px;
-    padding: 20px 0;
+    padding: 10px 0;
     line-height: 1.5;
     color: var(--color-Gray-500);
 }
 
-.content h1 {
-    width: fit-content;
-}
-
-.content h1:hover{
-    color: var(--color-yellow);
-    text-shadow: 1.5px 1.5px var(--color-Gray-500);
-}
 
 .profile {
     margin-top: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 
 .profile img {
@@ -95,28 +104,14 @@ footer{
     margin-top: 10px;
 }
 
-@media (max-width:450px){
-        main {
-            width: 320px;
-            padding: 15px;
+@media (max-width:420px){
+    .card {
+        width: 100%;
+        max-width: 340px;
     }
 
-    .content{
-        width: 300px;
+    .card-img {
+        max-width: 100%;
+        height: auto;
     }
-
-    .content h1{
-        font-size: 22px;
-    }
-
-    .content p{
-        width: 280px;
-    }
-
-    .profile img {
-    width: 30px;
-}
-    .profile h3{
-    font-size: 15px;
-}
 }

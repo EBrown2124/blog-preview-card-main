@@ -11,3 +11,5 @@ what I need to work on
 -- having a flow of styling to make it easier to read
 -- fitting content better then what I did (I feel like could of done better)
 -- for HTML side of thing I feel my naming element could of been better
+
+Update the project becuase saw other members on frontend Mentor with better soltion to reference from and noting what I need to relearn and new infoation to aid in my work flow
