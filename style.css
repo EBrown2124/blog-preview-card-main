@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Figtree";
+    font-family:"Figtree";
     src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
     font-style: normal;
     font-weight: 500 800;
@@ -11,4 +11,112 @@
     --color-white:hsl(0, 0%, 100%);
     --color-Gray-500:hsl(0, 0%, 42%);
     --color-Gray-950:hsl(0, 0%, 7%);
+}
+
+.attribution { font-size: 0.6875rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-yellow);
+    font-family:"Figtree", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: min-content;
+    padding: 30px;
+    border-radius: 30px;
+    border: 2px solid var(--color-Gray-950);
+    box-shadow: 10px 10px var(--color-Gray-950);
+}
+
+#banner {
+    border-radius: 20px;
+}
+
+.tag {
+    margin: 25px 0 15px;
+    background-color: var(--color-yellow);
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.content{
+margin: 20px 0;
+}
+
+.content p {
+    width: fit-content;
+    font-size: 16px;
+    padding: 20px 0;
+    line-height: 1.5;
+    color: var(--color-Gray-500);
+}
+
+.content h1 {
+    width: fit-content;
+}
+
+.content h1:hover{
+    color: var(--color-yellow);
+    text-shadow: 1.5px 1.5px var(--color-Gray-500);
+}
+
+.profile {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.profile img {
+    width: 50px;
+    margin-right: 15px;
+}
+
+footer{
+    margin-top: 10px;
+}
+
+@media (max-width:450px){
+        main {
+            width: 320px;
+            padding: 15px;
+    }
+
+    .content{
+        width: 300px;
+    }
+
+    .content h1{
+        font-size: 22px;
+    }
+
+    .content p{
+        width: 280px;
+    }
+
+    .profile img {
+    width: 30px;
+}
+    .profile h3{
+    font-size: 15px;
+}
 }
